@@ -42,7 +42,7 @@ namespace IcMimarlikProje.Controllers
             if (recaptcha == "NOCOMMENT")
                 return Json("NOCOMMENT", JsonRequestBehavior.AllowGet);
             var response = recaptcha;
-            string secretKey = "6Lc35JkaAAAAAOtBr7Ez3h5WR9-RTkh6SpRGcV_p";
+            string secretKey = "";
             var client = new WebClient();
             var result = client.DownloadString(string.Format("https://www.google.com/recaptcha/api/siteverify?secret={0}&response={1}", secretKey, response));
             var obj = JObject.Parse(result);
