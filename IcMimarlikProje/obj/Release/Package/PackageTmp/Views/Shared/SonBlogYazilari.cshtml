@@ -1,0 +1,22 @@
+﻿@model IEnumerable<IcMimarlikProje.Models.Data.Articles>
+
+
+
+<div class="posts">
+    <div class="container">
+        <div class="row">
+            @foreach (var yazi in Model)
+            {
+                <div class="posts__item col-12 col-lg-4">
+                    <a href="@Url.Action("Yazi","Blog", new { Slug = yazi.Slug })" class="posts__item-inner">
+                        <img src=/UploadedFiles/@yazi.Thumbnail alt="" class="posts__image">
+                        <span class="posts__item-content">
+                                <span class="posts__item-footer"><span class="posts__category">@yazi.Title</span><span class="posts__date">@yazi.ViewsCount</span></span>
+                                <span class="posts__item-title">@yazi.CreatedDate</span>
+                        </span>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

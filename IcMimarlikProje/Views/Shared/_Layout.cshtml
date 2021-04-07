@@ -1,0 +1,179 @@
+﻿@model dynamic
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Mertcan Gökmen">
+    <title>@ViewBag.Title</title>
+    <meta name="description" content="@ViewBag.Description">
+    <meta name="keywords" content="@ViewBag.Keywords">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Teko:300,400" rel="stylesheet">
+
+    <link href="/assets/css/icofont.min.css" rel="stylesheet">
+    <link href="/assets/css/linearicons.min.css" rel="stylesheet">
+    <link href="/assets/css/magnific-popup.min.css" rel="stylesheet">
+    <link href="/assets/css/animsition.min.css" rel="stylesheet">
+    <link href="/assets/css/swiper.min.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="/assets/css/theme.css" rel="stylesheet">
+    <link href="/assets/css/responsive.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<body class="page">
+    <div class="page__inner animsition" style="animation-duration: 500ms; opacity: 1;">
+        <header class="header  header_fixed header_offset header_is_fixed">
+            <div class="header__container" style="top: -78px;">
+                <div class="header__wrapper container-fluid">
+                    <div class="header__inner"><a href="/" class="logo header__logo">MSK İÇ MİMARLIK</a><button type="button" class="header__menu-button"><span class="header__menu-button-inner"></span></button></div>
+                </div>
+                <div class="header-fixed">
+                    <div class="header-fixed__bottom container">
+                        <ul class="top-menu header-fixed__menu">
+                            <li class="top-menu__menu-item">
+                                <div class="dropdown">
+                                    <a><div class="dropdown__trigger top-menu__menu-link">@Html.ActionLink("Anasayfa", "Index", "Home")</div></a>
+                                </div>
+                            </li>
+                            <li class="top-menu__menu-item">
+                                <div class="dropdown">
+                                    <a><div class="dropdown__trigger top-menu__menu-link">@Html.ActionLink("Kurumsal", "Kurumsal", "Home")</div></a>
+                                </div>
+                            </li>
+                            <li class="top-menu__menu-item">
+                                <div class="dropdown">
+                                    <a><div class="dropdown__trigger top-menu__menu-link">@Html.ActionLink("Blog", "Index", "Blog")</div></a>
+                                </div>
+                            </li>
+                            <li class="top-menu__menu-item">
+                                <div class="dropdown">
+                                    <a><div class="dropdown__trigger top-menu__menu-link">@Html.ActionLink("İletişim", "Iletisim", "Home")</div></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="header__overlay"></div>
+            <div class="menu-panel header__menu">
+                <div class="menu-panel__inner">
+                    <button type="button" class="header__menu-button header__menu-button_fixed"><span class="header__menu-button-inner"></span></button>
+
+                    <div class="menu-panel__menu">
+                        <div class="menu-panel__menu-item">
+                            <a><div data-toggle="collapse" class="menu-panel__menu-link collapsed">@Html.ActionLink("Anasayfa", "Index", "Home")</div></a>
+                        </div>
+                        <div class="menu-panel__menu-item">
+                            <a> <div data-toggle="collapse" class="menu-panel__menu-link collapsed">@Html.ActionLink("Kurumsal", "Kurumsal", "Home")</div></a>
+                        </div>
+                        <div class="menu-panel__menu-item">
+                            <a> <div data-toggle="collapse" class="menu-panel__menu-link collapsed">@Html.ActionLink("Galeri", "Galeri", "Home")</div></a>
+
+                        </div>
+                        <div class="menu-panel__menu-item">
+                            <a> <div data-toggle="collapse" class="menu-panel__menu-link collapsed">@Html.ActionLink("İletişim", "Iletisim", "Home")</div></a>
+                        </div>
+                    </div>
+                    <div class="menu-panel__footer">
+                        <div class="socials menu-panel__socials">
+                            <a href="#" class="socials__social icofont-twitter">
+                                <div class="visually-hidden">twitter</div>
+                            </a><a href="#" class="socials__social icofont-facebook">
+                                <div class="visually-hidden">facebook</div>
+                            </a><a href="#" class="socials__social icofont-google-plus">
+                                <div class="visually-hidden">google plus</div>
+                            </a>
+                        </div>
+                        <div class="menu-panel__bottom">
+                            <div class="menu-panel__copyright">© 2021 <strong>MSK İç Mimarlık</strong> Tüm Hakları Saklıdır.</div>
+                            <div class="menu-panel__author"><a href="#">Mertcan Gökmen</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            @RenderBody()
+        </main>
+        <footer class="footer-studio footer footer_fixed">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="footer-studio__column col-6 col-xl-4">
+                        <div class="footer-studio__group-title"></div>
+                        <ul class="footer-studio__list">
+                            <li class="footer-studio__list-item"><a><div class="footer-studio__list-link">@Html.ActionLink("Hakkımızda", "Kurumsal", "Home")</div></a></li>
+                            <li class="footer-studio__list-item"><a class="footer-studio__list-link">@Html.ActionLink("İletişim", "Iletisim", "Home")</a></li>
+                            <li class="footer-studio__list-item"><a class="footer-studio__list-link">@Html.ActionLink("Galeri", "Galeri", "Home")</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-studio__column col-12 col-sm-6 col-xl-4">
+                        <div class="footer-studio__group-title">Bize Ulaşın</div>
+                        <p>Karşıyaka Mahallesi Adnan Menderes Bulvarı Osmanlı Sitesi D Blok No 14,<br>Kumluca/ANTALYA</p>
+                        <p>info@serakaraalpicmimarlik.com</p>
+                        <p>(+90) 555 079 67 15</p>
+                    </div>
+                    <div class="footer-studio__column col-12 col-sm-6 col-xl-4">
+                        <div class="footer-studio__group-title">Haberler ve Yenilikler</div>
+                        <form action="#" class="footer-studio__form"><input placeholder="Mailinizi giriniz..." class="footer-studio__input" type="text"><button class="footer-studio__submit">Subscribe<span class="footer-studio__submit-icon icon-chevron-right"></span></button></form>
+                    </div>
+                </div>
+                <div class="footer-studio__bottom">
+                    <div class="row">
+                        <div class="footer-studio__column col-12 col-sm-6">
+                            <div class="footer-studio__copyright">© 2021 <strong>MSK İÇ MİMARLIK</strong> Tüm hakları saklıdır. <a href="#">Mertcan Gökmen</a></div>
+                        </div>
+                        <div class="footer-studio__column col-12 col-sm-6 col-lg-3 offset-lg-3">
+                            <div class="footer-studio__socials">
+                                <a href="#" class="footer-studio__social icofont-twitter">
+                                    <div class="visually-hidden">twitter</div>
+                                </a><a href="#" class="footer-studio__social icofont-facebook">
+                                    <div class="visually-hidden">facebook</div>
+                                </a><a href="#" class="footer-studio__social icofont-behance">
+                                    <div class="visually-hidden">behance</div>
+                                </a><a href="#" class="footer-studio__social icofont-google-plus">
+                                    <div class="visually-hidden">google plus</div>
+                                </a><a href="#" class="footer-studio__social icofont-linkedin">
+                                    <div class="visually-hidden">linkedin</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/assets/js/jquery.viewport.min.js"></script>
+    <script src="/assets/js/jQuerySimpleCounter.min.js"></script>
+    <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="//unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/assets/js/isotope.pkgd.min.js"></script>
+    <script src="/assets/js/animsition.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/rellax.min.js"></script>
+    <script src="/assets/js/swiper.min.js"></script>
+    <script src="/assets/js/smoothscroll.js"></script>
+    <script src="/assets/js/svg4everybody.legacy.min.js"></script>
+    <script src="/assets/js/TweenMax.min.js"></script>
+    <script src="/assets/js/TimelineLite.min.js"></script>
+    <script src="/assets/js/typed.min.js"></script>
+    <script src="/assets/js/vivus.min.js"></script>
+
+    <script src="/assets/js/theme.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

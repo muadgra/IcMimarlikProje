@@ -1,0 +1,760 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{29974C01-7C8D-42AE-8C51-4B964AD15202}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IcMimarlikProje</RootNamespace>
+    <AssemblyName>IcMimarlikProje</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Authentication.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Authentication.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Authentication.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Authentication.Core, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Authentication.Core.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Authentication.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Authorization, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Authorization.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Authorization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Authorization.Policy, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Authorization.Policy.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Authorization.Policy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Hosting.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Hosting.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Hosting.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Hosting.Server.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Hosting.Server.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Extensions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Extensions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Features, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Features.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Features.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Mvc.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Mvc.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Mvc.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Mvc.Core, Version=2.2.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Mvc.Core.2.2.5\lib\netstandard2.0\Microsoft.AspNetCore.Mvc.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.ResponseCaching.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.ResponseCaching.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Routing, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Routing.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Routing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Routing.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Routing.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Routing.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.WebUtilities, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.WebUtilities.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.WebUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.DotNet.PlatformAbstractions, Version=2.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.DotNet.PlatformAbstractions.2.1.0\lib\net45\Microsoft.DotNet.PlatformAbstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.2.2.0\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyModel, Version=2.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyModel.2.1.0\lib\net451\Microsoft.Extensions.DependencyModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileProviders.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Hosting.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Hosting.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Hosting.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.ObjectPool, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.ObjectPool.2.2.0\lib\netstandard2.0\Microsoft.Extensions.ObjectPool.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Net.Http.Headers, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.Headers.2.2.0\lib\netstandard2.0\Microsoft.Net.Http.Headers.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.5.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.1\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.1\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.5.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.1\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\admin\Controllers\AdminController.cs" />
+    <Compile Include="Areas\admin\Controllers\ArticlesController.cs" />
+    <Compile Include="Areas\admin\Models\AuthorizeAdminUserAttribute.cs" />
+    <Compile Include="Areas\admin\Models\Kullanici.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Data\Articles.cs" />
+    <Compile Include="Models\Data\Comment.cs" />
+    <Compile Include="Models\Data\SeraKaraalpContext.cs" />
+    <Compile Include="Models\Data\sysdiagrams.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminSayfaTema\bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="AdminSayfaTema\bootstrap\css\bootstrap.min.css" />
+    <Content Include="AdminSayfaTema\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="AdminSayfaTema\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="AdminSayfaTema\bootstrap\js\bootstrap.min.js" />
+    <Content Include="AdminSayfaTema\css\theme.css" />
+    <Content Include="AdminSayfaTema\images\bg.png" />
+    <Content Include="AdminSayfaTema\images\icons\css\font-awesome.css" />
+    <Content Include="AdminSayfaTema\images\img.jpg" />
+    <Content Include="AdminSayfaTema\images\jquery-ui\picker.png" />
+    <Content Include="AdminSayfaTema\images\user.png" />
+    <Content Include="AdminSayfaTema\scripts\common.js" />
+    <Content Include="AdminSayfaTema\scripts\datatables\jquery.dataTables.js" />
+    <Content Include="AdminSayfaTema\scripts\flot\jquery.flot.js" />
+    <Content Include="AdminSayfaTema\scripts\flot\jquery.flot.pie.js" />
+    <Content Include="AdminSayfaTema\scripts\flot\jquery.flot.resize.js" />
+    <Content Include="AdminSayfaTema\scripts\jquery-1.9.1.min.js" />
+    <Content Include="AdminSayfaTema\scripts\jquery-ui-1.10.1.custom.min.js" />
+    <Content Include="assets\ckeditor\ckeditor.js" />
+    <Content Include="assets\ckeditor\config.js" />
+    <Content Include="assets\ckeditor\contents.css" />
+    <Content Include="assets\ckeditor\css\samples.css" />
+    <Content Include="assets\ckeditor\js\sample.js" />
+    <Content Include="assets\ckeditor\js\sf.js" />
+    <Content Include="assets\ckeditor\lang\en.js" />
+    <Content Include="assets\ckeditor\lang\tr.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\af.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\ar.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\az.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\bg.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\ca.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\cs.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\cy.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\da.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\de-ch.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\de.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\el.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\en-au.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\en-gb.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\en.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\eo.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\es-mx.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\es.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\et.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\eu.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\fa.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\fi.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\fo.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\fr-ca.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\fr.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\gl.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\gu.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\he.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\hi.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\hr.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\hu.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\id.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\it.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\ja.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\km.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\ko.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\ku.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\lt.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\lv.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\mk.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\mn.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\nb.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\nl.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\no.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\oc.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\pl.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\pt-br.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\pt.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\ro.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\ru.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\si.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\sk.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\sl.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\sq.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\sr-latn.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\sr.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\sv.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\th.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\tr.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\tt.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\ug.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\uk.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\vi.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\zh.js" />
+    <Content Include="assets\ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="assets\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="assets\ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
+    <Content Include="assets\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="assets\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="assets\ckeditor\plugins\colordialog\dialogs\colordialog.css" />
+    <Content Include="assets\ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="assets\ckeditor\plugins\copyformatting\cursors\cursor-disabled.svg" />
+    <Content Include="assets\ckeditor\plugins\copyformatting\cursors\cursor.svg" />
+    <Content Include="assets\ckeditor\plugins\copyformatting\styles\copyformatting.css" />
+    <Content Include="assets\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="assets\ckeditor\plugins\dialog\styles\dialog.css" />
+    <Content Include="assets\ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="assets\ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="assets\ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="assets\ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="assets\ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="assets\ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="assets\ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="assets\ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="assets\ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="assets\ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="assets\ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="assets\ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="assets\ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="assets\ckeditor\plugins\icons.png" />
+    <Content Include="assets\ckeditor\plugins\icons_hidpi.png" />
+    <Content Include="assets\ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="assets\ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="assets\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="assets\ckeditor\plugins\image\images\noimage.png" />
+    <Content Include="assets\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="assets\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="assets\ckeditor\plugins\link\images\anchor.png" />
+    <Content Include="assets\ckeditor\plugins\link\images\hidpi\anchor.png" />
+    <Content Include="assets\ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="assets\ckeditor\plugins\magicline\images\hidpi\icon-rtl.png" />
+    <Content Include="assets\ckeditor\plugins\magicline\images\hidpi\icon.png" />
+    <Content Include="assets\ckeditor\plugins\magicline\images\icon-rtl.png" />
+    <Content Include="assets\ckeditor\plugins\magicline\images\icon.png" />
+    <Content Include="assets\ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="assets\ckeditor\plugins\pastefromgdocs\filter\default.js" />
+    <Content Include="assets\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="assets\ckeditor\plugins\pastetools\filter\common.js" />
+    <Content Include="assets\ckeditor\plugins\pastetools\filter\image.js" />
+    <Content Include="assets\ckeditor\plugins\preview\images\pagebreak.gif" />
+    <Content Include="assets\ckeditor\plugins\preview\preview.html" />
+    <Content Include="assets\ckeditor\plugins\preview\styles\screen.css" />
+    <Content Include="assets\ckeditor\plugins\scayt\dialogs\dialog.css" />
+    <Content Include="assets\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="assets\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="assets\ckeditor\plugins\scayt\skins\moono-lisa\scayt.css" />
+    <Content Include="assets\ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="assets\ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="assets\ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="assets\ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="assets\ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="assets\ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="assets\ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="assets\ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="assets\ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="assets\ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="assets\ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="assets\ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\angel_smile.png" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\angry_smile.png" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\broken_heart.png" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\confused_smile.png" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\cry_smile.png" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\devil_smile.png" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\embarrassed_smile.gif" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\embarrassed_smile.png" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\envelope.png" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\heart.png" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\kiss.png" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\lightbulb.png" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\omg_smile.png" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\regular_smile.png" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\sad_smile.png" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\shades_smile.png" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\teeth_smile.png" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\thumbs_down.png" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\thumbs_up.png" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\tongue_smile.gif" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\tongue_smile.png" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.png" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="assets\ckeditor\plugins\smiley\images\wink_smile.png" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\af.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\ar.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\az.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\bg.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\ca.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\cs.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\cy.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\da.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\de-ch.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\de.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\el.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\en-au.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\en-ca.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\en-gb.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\en.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\eo.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\es-mx.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\es.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\et.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\eu.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\fa.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\fi.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\fr-ca.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\fr.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\gl.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\he.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\hr.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\hu.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\id.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\it.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\ja.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\km.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\ko.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\ku.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\lt.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\lv.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\nb.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\nl.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\no.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\oc.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\pl.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\pt.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\ro.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\ru.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\si.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\sk.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\sl.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\sq.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\sr-latn.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\sr.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\sv.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\th.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\tr.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\tt.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\ug.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\uk.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\vi.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\zh.js" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="assets\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="assets\ckeditor\plugins\tableselection\styles\tableselection.css" />
+    <Content Include="assets\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="assets\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="assets\ckeditor\plugins\templates\dialogs\templates.css" />
+    <Content Include="assets\ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="assets\ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="assets\ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="assets\ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="assets\ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="assets\ckeditor\plugins\widget\images\handle.png" />
+    <Content Include="assets\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="assets\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="assets\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="assets\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="assets\ckeditor\plugins\wsc\dialogs\wsc_ie.js" />
+    <Content Include="assets\ckeditor\plugins\wsc\skins\moono-lisa\wsc.css" />
+    <Content Include="assets\ckeditor\plugins\zsuploader\delete.php" />
+    <Content Include="assets\ckeditor\plugins\zsuploader\images\Logo.png" />
+    <Content Include="assets\ckeditor\plugins\zsuploader\plugin.js" />
+    <Content Include="assets\ckeditor\plugins\zsuploader\Read_me.txt" />
+    <Content Include="assets\ckeditor\plugins\zsuploader\styles.css" />
+    <Content Include="assets\ckeditor\plugins\zsuploader\upload.php" />
+    <Content Include="assets\ckeditor\plugins\zsuploader\uploader.php" />
+    <Content Include="assets\ckeditor\plugins\zsuploader\version_checker.php" />
+    <Content Include="assets\ckeditor\skins\kama\dialog.css" />
+    <Content Include="assets\ckeditor\skins\kama\dialog_ie.css" />
+    <Content Include="assets\ckeditor\skins\kama\dialog_ie7.css" />
+    <Content Include="assets\ckeditor\skins\kama\dialog_ie8.css" />
+    <Content Include="assets\ckeditor\skins\kama\dialog_iequirks.css" />
+    <Content Include="assets\ckeditor\skins\kama\editor.css" />
+    <Content Include="assets\ckeditor\skins\kama\editor_ie.css" />
+    <Content Include="assets\ckeditor\skins\kama\editor_ie7.css" />
+    <Content Include="assets\ckeditor\skins\kama\editor_ie8.css" />
+    <Content Include="assets\ckeditor\skins\kama\editor_iequirks.css" />
+    <Content Include="assets\ckeditor\skins\kama\icons.png" />
+    <Content Include="assets\ckeditor\skins\kama\icons_hidpi.png" />
+    <Content Include="assets\ckeditor\skins\kama\images\dialog_sides.gif" />
+    <Content Include="assets\ckeditor\skins\kama\images\dialog_sides.png" />
+    <Content Include="assets\ckeditor\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="assets\ckeditor\skins\kama\images\mini.gif" />
+    <Content Include="assets\ckeditor\skins\kama\images\spinner.gif" />
+    <Content Include="assets\ckeditor\skins\kama\images\sprites.png" />
+    <Content Include="assets\ckeditor\skins\kama\images\sprites_ie6.png" />
+    <Content Include="assets\ckeditor\skins\kama\images\toolbar_start.gif" />
+    <Content Include="assets\ckeditor\styles.js" />
+    <Content Include="assets\ckeditor\toolbarconfigurator\css\fontello.css" />
+    <Content Include="assets\ckeditor\toolbarconfigurator\font\fontello.svg" />
+    <Content Include="assets\ckeditor\toolbarconfigurator\font\LICENSE.txt" />
+    <Content Include="assets\ckeditor\toolbarconfigurator\index.html" />
+    <Content Include="assets\ckeditor\toolbarconfigurator\js\abstracttoolbarmodifier.js" />
+    <Content Include="assets\ckeditor\toolbarconfigurator\js\fulltoolbareditor.js" />
+    <Content Include="assets\ckeditor\toolbarconfigurator\js\toolbarmodifier.js" />
+    <Content Include="assets\ckeditor\toolbarconfigurator\js\toolbartextmodifier.js" />
+    <Content Include="assets\ckeditor\toolbarconfigurator\lib\codemirror\codemirror.css" />
+    <Content Include="assets\ckeditor\toolbarconfigurator\lib\codemirror\codemirror.js" />
+    <Content Include="assets\ckeditor\toolbarconfigurator\lib\codemirror\javascript.js" />
+    <Content Include="assets\ckeditor\toolbarconfigurator\lib\codemirror\neo.css" />
+    <Content Include="assets\ckeditor\toolbarconfigurator\lib\codemirror\show-hint.css" />
+    <Content Include="assets\ckeditor\toolbarconfigurator\lib\codemirror\show-hint.js" />
+    <Content Include="assets\css\ajax-loader.gif" />
+    <Content Include="assets\css\animsition.min.css" />
+    <Content Include="assets\css\assets\loader.gif" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\dark.css" />
+    <Content Include="assets\css\icofont.min.css" />
+    <Content Include="assets\css\jquery.fancybox.css" />
+    <Content Include="assets\css\jquery.pagepiling.css" />
+    <Content Include="assets\css\linearicons.min.css" />
+    <Content Include="assets\css\magnific-popup.min.css" />
+    <Content Include="assets\css\responsive.css" />
+    <Content Include="assets\css\revolution-addons\panorama\revolution.addon.panorama.css" />
+    <Content Include="assets\css\revolution\layers.css" />
+    <Content Include="assets\css\revolution\settings.css" />
+    <Content Include="assets\css\swiper.min.css" />
+    <Content Include="assets\css\theme.css" />
+    <Content Include="assets\img\distortion.jpg" />
+    <Content Include="assets\img\dot-dark.jpg" />
+    <Content Include="assets\img\dot-gray.jpg" />
+    <Content Include="assets\img\dot.jpg" />
+    <Content Include="assets\img\dummy.png" />
+    <Content Include="assets\img\error-image.jpg" />
+    <Content Include="assets\img\error-image.png" />
+    <Content Include="assets\img\icon.svg" />
+    <Content Include="assets\img\icon_building.svg" />
+    <Content Include="assets\img\icon_factory.svg" />
+    <Content Include="assets\img\icon_house.svg" />
+    <Content Include="assets\img\quote.png" />
+    <Content Include="assets\img\specialization-icon-1.svg" />
+    <Content Include="assets\img\specialization-icon-2.svg" />
+    <Content Include="assets\img\specialization-icon-3.svg" />
+    <Content Include="assets\img\specialization-icon-4.svg" />
+    <Content Include="assets\img\water-maps.jpg" />
+    <Content Include="assets\img\zoom-count-bg.jpg" />
+    <Content Include="assets\img\zoom-image-head-bg.jpg" />
+    <Content Include="assets\img\zoom-image-head-bg2.png" />
+    <Content Include="assets\js\animsition.min.js" />
+    <Content Include="assets\js\bootstrap.bundle.min.js" />
+    <Content Include="assets\js\gmap.js" />
+    <Content Include="assets\js\isotope.pkgd.min.js" />
+    <Content Include="assets\js\jquery.magnific-popup.min.js" />
+    <Content Include="assets\js\jquery.min.js" />
+    <Content Include="assets\js\jquery.pagepiling.min.js" />
+    <Content Include="assets\js\jquery.viewport.min.js" />
+    <Content Include="assets\js\jQuerySimpleCounter.min.js" />
+    <Content Include="assets\js\polyfill.min.js" />
+    <Content Include="assets\js\rellax.min.js" />
+    <Content Include="assets\js\revolution-addons\panorama\revolution.addon.panorama.js" />
+    <Content Include="assets\js\revolution-addons\panorama\revolution.addon.panorama.min.js" />
+    <Content Include="assets\js\revolution-addons\panorama\three.min.js" />
+    <Content Include="assets\js\revolution-addons\slicey\revolution.addon.slicey.min.js" />
+    <Content Include="assets\js\revolution\extensions\revolution.extension.actions.min.js" />
+    <Content Include="assets\js\revolution\extensions\revolution.extension.carousel.min.js" />
+    <Content Include="assets\js\revolution\extensions\revolution.extension.kenburn.min.js" />
+    <Content Include="assets\js\revolution\extensions\revolution.extension.layeranimation.min.js" />
+    <Content Include="assets\js\revolution\extensions\revolution.extension.migration.min.js" />
+    <Content Include="assets\js\revolution\extensions\revolution.extension.navigation.min.js" />
+    <Content Include="assets\js\revolution\extensions\revolution.extension.parallax.min.js" />
+    <Content Include="assets\js\revolution\extensions\revolution.extension.slideanims.min.js" />
+    <Content Include="assets\js\revolution\extensions\revolution.extension.video.min.js" />
+    <Content Include="assets\js\revolution\jquery.themepunch.revolution.min.js" />
+    <Content Include="assets\js\revolution\jquery.themepunch.tools.min.js" />
+    <Content Include="assets\js\smoothscroll.js" />
+    <Content Include="assets\js\svg4everybody.legacy.min.js" />
+    <Content Include="assets\js\swiper.min.js" />
+    <Content Include="assets\js\theme.js" />
+    <Content Include="assets\js\TimelineLite.min.js" />
+    <Content Include="assets\js\tinymce.js" />
+    <Content Include="assets\js\TweenMax.min.js" />
+    <Content Include="assets\js\typed.min.js" />
+    <Content Include="assets\js\vivus.min.js" />
+    <Content Include="assets\js\water.js" />
+    <Content Include="Content\Site.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="UploadedFiles\create-deneme123.png" />
+    <Content Include="UploadedFiles\create-deneme456.PNG" />
+    <Content Include="UploadedFiles\deneme-11.jpg" />
+    <Content Include="UploadedFiles\deneme-makale.jpg" />
+    <Content Include="UploadedFiles\home-slide-4.jpg" />
+    <Content Include="UploadedFiles\kurumsaldanisma.jpg" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Iletisim.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="assets\ckeditor\ulpoads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\fonts\Icofont.woff" />
+    <Content Include="assets\fonts\Icofont.woff2" />
+    <Content Include="assets\fonts\Linearicons.woff" />
+    <Content Include="assets\fonts\Linearicons.woff2" />
+    <Content Include="Areas\admin\Views\Web.config" />
+    <Content Include="Areas\admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\admin\Views\Admin\AdminSayfasi.cshtml" />
+    <Content Include="AdminSayfaTema\images\icons\font\fontawesome-webfont3294.eot" />
+    <Content Include="AdminSayfaTema\images\icons\font\fontawesome-webfont3294.ttf" />
+    <Content Include="AdminSayfaTema\images\icons\font\fontawesome-webfont3294.woff" />
+    <Content Include="AdminSayfaTema\images\icons\font\fontawesome-webfontd41d.eot" />
+    <Content Include="Areas\admin\Views\Admin\Giris.cshtml" />
+    <Content Include="assets\ckeditor\plugins\scayt\CHANGELOG.md" />
+    <Content Include="assets\ckeditor\plugins\scayt\LICENSE.md" />
+    <Content Include="assets\ckeditor\plugins\scayt\README.md" />
+    <Content Include="assets\ckeditor\plugins\wsc\LICENSE.md" />
+    <Content Include="assets\ckeditor\plugins\wsc\README.md" />
+    <Content Include="assets\ckeditor\skins\kama\readme.md" />
+    <Content Include="assets\ckeditor\toolbarconfigurator\font\config.json" />
+    <Content Include="assets\ckeditor\toolbarconfigurator\font\fontello.eot" />
+    <Content Include="assets\ckeditor\toolbarconfigurator\font\fontello.ttf" />
+    <Content Include="assets\ckeditor\toolbarconfigurator\font\fontello.woff" />
+    <Content Include="assets\ckeditor\toolbarconfigurator\lib\codemirror\LICENSE" />
+    <Content Include="Areas\admin\Views\Shared\AdminLayout.cshtml" />
+    <Content Include="Areas\admin\Views\Articles\Create.cshtml" />
+    <None Include="packages.config" />
+    <Content Include="Views\Home\Galeri.cshtml" />
+    <Content Include="Areas\admin\Views\Articles\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\Articles\Index.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Blog\Yazi.cshtml" />
+    <Content Include="Views\Home\Kurumsal.cshtml" />
+    <Content Include="Views\Shared\SonBlogYazilari.cshtml" />
+    <Content Include="UploadedFiles\asdsadas123123123" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58736</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58736/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

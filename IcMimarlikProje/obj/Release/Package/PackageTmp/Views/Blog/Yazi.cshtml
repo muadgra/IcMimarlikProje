@@ -1,0 +1,110 @@
+﻿@model IcMimarlikProje.Models.Data.Articles
+@{
+    ViewBag.Title = "Yazi";
+    ViewBag.Description = "Yazi Description";
+    ViewBag.Keywords = "Yazi Keydords";
+}
+<head>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<main>
+    <div class="single-post">
+        <div class="parallax-image single-post__head">
+            <div data-rellax-speed="-3" data-rellax-percentage="0.5" style=" background-image: url(http://paul-themes.com/html/arquito/demo/img/journal-image-1.jpg);
+        transform: translate3d(0px, 111px, 0px);" class="parallax-image__image"></div>
+        </div>
+        <div class="container">
+            @Html.Raw(Model.Content)
+        </div>
+        <div class="comments">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-8 offset-lg-2">
+                        <div class="comments__title heading-smallest">@Model.Comment.Count Yorum</div>
+                        <div class="comments__list">
+                            @foreach (var item in Model.Comment)
+                            {
+                                <div class="comment-card">
+                                    <img src="img/comment-avatar-2.jpg" alt="" class="comment-card__image" />
+                                    <div class="comment-card__content">
+                                        <div class="comment-card__head">
+                                            <div class="comment-card__name">@item.AuthorName</div>
+                                            <div class="comment-card__date">- @item.CommentDate</div>
+                                        </div>
+
+                                        <div class="comment-card__text">
+                                            @item.CommentText
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        <div class="comments__title heading-smallest">Yorumda bulunun</div>
+                        <form method="post" action="@Url.Action("Yorum", "Blog")">
+                            <div class="row">
+                                <div class="form-horizontal">
+                                    <label for="AuthorName">Ad-Soyad:</label>
+                                    <input type="text" id="AuthorName" name="AuthorName" class="comments__input-text"><br><br>
+                                    <label for="CommentText">Yorum:</label>
+                                    <input type="text" id="CommentText" name="CommentText" class="comments__input-textarea"><br><br>
+                                    <div class="g-recaptcha" data-sitekey="6Lc35JkaAAAAAIdrtMa5fie06uplz4GEDIQ-FSgv"></div>
+                                    <div class="form-group" style="margin-top:30px">
+                                        <div class="col-md-offset-2 col-md-10" >
+                                            <button type="button" class="comments__submit" onclick="Ekle(@Model.ArticleId)">Gönder</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+@section Scripts{
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <script>
+        function Ekle(id) {
+            var model = { "ArticleId": id, "CommentText": $("#CommentText").val(), "AuthorName": $("#AuthorName").val() };
+            var recaptcha = $("#g-recaptcha-response").val();
+            if (recaptcha == "")
+                recaptcha = "ERR";
+            if ($("#AuthorName").val() == "")
+                recaptcha = "NOAUTHOR";
+            else if ($("#CommentText").val() == "")
+                recaptcha = "NOCOMMENT";
+            $.ajax({
+                url: "/Blog/Yorum",
+                method: "POST",
+                data: { "comment": model, "recaptcha": recaptcha },
+            }).done(function (result) {
+                if (result != "" && result != "ERR" && result != "NOAUTHOR" && result != "NOCOMMENT") {
+                    $("#CommentText").val("");
+                    $("#AuthorName").val("");
+                    $(".comments__list").prepend(result);
+                    $(window).scrollTop($('.comments__title').offset().top);
+                    $('.comments__title').text((@Model.Comment.Count +1).toString() + " Yorum");
+                    
+                    swal("Yorumunuz başarıyla eklendi.");
+                } else {
+                    switch (result) {
+                        case "NOAUTHOR":
+                            swal("Lütfen kullanıcı adı giriniz.");
+                            break;
+                        case "NOCOMMENT":
+                            swal("Lütfen yorum giriniz.");
+                            break;
+                        default:
+                            swal("Lütfen Captcha'ya tik atınız.");
+                    }
+
+
+                }
+            }).fail(function (jqXHR, textStatus) {
+                alert("Request failed: " + textStatus);
+            });
+        }
+    </script>
+}

@@ -1,0 +1,377 @@
+body {
+  background: #242323;
+  color: #fff;
+}
+
+main {
+  background: #242323;
+}
+
+.article-listing-item {
+  background: #2b2b2b;
+}
+
+.cards-block__text {
+  color: #999;
+}
+
+.collapse-list__collapse-text {
+  color: #999;
+}
+
+.comments {
+  background: #2b2b2b;
+}
+
+.comments__text {
+  color: #999;
+}
+
+.comment-card__text {
+  color: #999;
+}
+
+.comment-card__content {
+  border-color: #999;
+}
+
+.contact-block {
+  border-color: #999;
+}
+
+.contact-block__text {
+  color: #999;
+}
+
+.counter-block__card {
+  background-image: url("../../assets/img/dot-dark.jpg");
+  background-color: #242323;
+}
+
+.counter-block__card-title {
+  color: #fff;
+}
+
+.counter-block__item-text {
+  color: #ccc;
+}
+
+.clients-wrapper {
+  background: #2c2c2c;
+}
+
+.clients__item-inner {
+  opacity: 0.3;
+}
+
+.dropdown__menu {
+  background: #242323;
+  color: #fff;
+  box-shadow: 0 0 65px rgba(255,255,255,0.07);
+}
+
+.featured-block {
+  background-image: url("../../assets/img/dot-dark.jpg");
+  background-color: #242323;
+}
+
+.featured-block__item-inner {
+  background: #232323;
+  color: #fff;
+}
+
+.featured-block__date {
+  color: #999;
+}
+
+.features-block__text {
+  color: #999;
+}
+
+.features-block__feature-text {
+  color: #999;
+}
+
+.footer-default__head {
+  border-color: #323232;
+}
+
+.footer-default__list {
+  color: #999;
+}
+
+.footer-default p {
+  color: #999;
+}
+
+.footer-default__social {
+  border-color: #666;
+  color: #666;
+}
+
+.footer-default__bottom strong,
+.footer-default__bottom a {
+  color: #fff;
+}
+
+.header_is_fixed .header__container {
+  background: #242323;
+  color: #fff;
+  box-shadow: 0 0 65px rgba(255,255,255,0.07);
+}
+
+.heading-default__breadcrumb-link {
+  color: #fff;
+}
+
+.heading-group__text {
+  color: #999;
+}
+
+.masonry__primary-filter-button {
+  color: #999;
+}
+
+.masonry__primary-filter-button_active,
+.masonry__primary-filter-button:hover {
+  color: #fff;
+}
+
+.masonry__secondary-filter-button {
+  color: #999;
+}
+
+.masonry__secondary-filter-button_active {
+  color: #f24a00;
+}
+
+.masonry-block {
+  border-color: #666;
+}
+
+.menu-panel {
+  background: #242323;
+  color: #fff;
+}
+
+.menu-panel__menu-link {
+  color: #fff;
+}
+
+.menu-panel__bottom a,
+.menu-panel__bottom strong {
+  color: #fff;
+}
+
+.news-masonry-item {
+  background: #2b2b2b;
+}
+
+.news-masonry-item__text {
+  color: #999;
+}
+
+.panorama-slider2__footer:after {
+  background: #242323;
+}
+
+.panorama-slider2__footer-menu {
+  background: #242323;
+  color: #fff;
+}
+
+.projects-block__filter {
+  color: #999;
+}
+
+.projects-block__control {
+  color: #666;
+}
+
+.projects-block__control:hover {
+  color: #fff;
+}
+
+.project-block__subtitle {
+  color: #666;
+}
+
+.project-detail__head-item strong {
+  color: #fff;
+}
+
+.project-detail__head-item,
+.project-detail__text {
+  color: #999;
+}
+
+.project-detail__navigation {
+  background: #2b2b2b;
+}
+
+.review-slider__control {
+  color: #999;
+  border-color: #999;
+}
+
+.review-slider__control:hover {
+  color: #fff;
+}
+
+.review-slider__text {
+  color: #999;
+}
+
+.reviews-block {
+  background-image: url("../../assets/img/dot-dark.jpg");
+}
+
+.reviews-block_template_zoom {
+  background: #2b2b2b;
+}
+
+.reviews-block__slide {
+  background: #242323;
+}
+
+.reviews-block__text {
+  color: #fff;
+}
+
+.reviews-block__control {
+  color: #666;
+}
+
+.reviews-block__control:hover {
+  color: #fff;
+}
+
+.person-block {
+  background: #2b2b2b;
+}
+
+.person-block__text {
+  color: #999;
+}
+
+.service-block {
+  background: #242323;
+}
+
+.service-block__text {
+  color: #999;
+}
+
+.service-detail__text {
+  color: #999;
+}
+
+.service-works {
+  background: #2b2b2b;
+  border-color: #999;
+}
+
+.simple-slider__control {
+  color: #666;
+}
+
+.simple-slider__control:hover {
+  color: #fff;
+}
+
+.single-post__text {
+  color: #999;
+}
+
+.single-post__links-title {
+  color: #fff;
+}
+
+.specialization-block__item-text {
+  color: #999;
+}
+
+.collapse-block__collapse-text {
+  color: #999;
+}
+
+.studio-filter__filter-link {
+  color: #fff;
+}
+
+.studio-filter__filter-link_active {
+  color: #f24a00;
+}
+
+.studio-posts {
+  background-image: url("../../assets/img/dot-dark.jpg");
+}
+
+.studio-reviews {
+  background: #2c2c2c;
+}
+
+.studio-reviews__review {
+  background: #232323;
+}
+
+.studio-reviews__more-link {
+  color: #999;
+}
+
+.team-block__control {
+  opacity: 1;
+  color: #666;
+}
+
+.team-block__control:hover {
+  color: #fff;
+}
+
+.team-block_separated {
+  border-color: #666;
+}
+
+.team-block__body_bordered {
+  border-color: #666;
+}
+
+.video-block:after {
+  background-image: url("../../assets/img/dot-dark.jpg");
+}
+
+.zoom-counter__card:before {
+  background: #242323;
+}
+
+.zoom-counter__card-title,
+.zoom-counter__card-description {
+  color: #fff;
+}
+
+.zoom-counter__text {
+  color: #999;
+}
+
+.zoom-counters__text {
+  color: #999;
+}
+
+.zoom-slider__button.swiper-slide-thumb-active {
+  background: #242323;
+  color: #fff;
+}
+
+.zoom-services__list,
+.zoom-services__item,
+.zoom-services__wrapper {
+  border-color: #3f3f3f;
+}
+
+.zoom-services__item {
+  background: transparent;
+}
+
+.zoom-services__item-text {
+  color: #999;
+}

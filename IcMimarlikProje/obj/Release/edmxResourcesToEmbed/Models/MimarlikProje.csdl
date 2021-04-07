@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MimarlikProjeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Articles">
+    <Key>
+      <PropertyRef Name="ArticleId" />
+    </Key>
+    <Property Name="ArticleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Thumbnail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="ViewsCount" Type="Int32" />
+    <Property Name="CommentsCount" Type="Int32" />
+    <Property Name="SeoAuthor" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SeoDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="SeoTags" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Comment" Relationship="Self.CommentArticle" FromRole="Articles" ToRole="Comment" />
+    <NavigationProperty Name="Articles1" Relationship="Self.FK_Articles_Articles" FromRole="Articles" ToRole="Articles1" />
+    <NavigationProperty Name="Articles2" Relationship="Self.FK_Articles_Articles" FromRole="Articles1" ToRole="Articles" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="0" />
+    <Property Name="Slug" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="CommentId" />
+    </Key>
+    <Property Name="CommentId" Type="Int32" Nullable="false" />
+    <Property Name="CommentText" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="AuthorName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ArticleId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Articles" Relationship="Self.CommentArticle" FromRole="Comment" ToRole="Articles" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="CommentArticle">
+    <End Role="Articles" Type="Self.Articles" Multiplicity="1" />
+    <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articles">
+        <PropertyRef Name="ArticleId" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="ArticleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Articles_Articles">
+    <End Role="Articles" Type="Self.Articles" Multiplicity="1" />
+    <End Role="Articles1" Type="Self.Articles" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Articles">
+        <PropertyRef Name="ArticleId" />
+      </Principal>
+      <Dependent Role="Articles1">
+        <PropertyRef Name="ArticleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MimarlikProjeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Articles" EntityType="Self.Articles" />
+    <EntitySet Name="Comment" EntityType="Self.Comment" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="CommentArticle" Association="Self.CommentArticle">
+      <End Role="Articles" EntitySet="Articles" />
+      <End Role="Comment" EntitySet="Comment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Articles_Articles" Association="Self.FK_Articles_Articles">
+      <End Role="Articles" EntitySet="Articles" />
+      <End Role="Articles1" EntitySet="Articles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

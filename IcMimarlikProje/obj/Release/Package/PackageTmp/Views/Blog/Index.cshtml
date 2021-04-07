@@ -1,0 +1,37 @@
+﻿@model IEnumerable<IcMimarlikProje.Models.Data.Articles>
+@{
+    ViewBag.Title = "Index";
+}
+<head>
+    <title>Blog</title>
+    <meta name="description" content="Blog Sayfası" />
+</head>
+<div class="heading-default heading-default heading-default_context_default" style="padding-top:80px">
+   
+</div>
+
+            <div class="masonry articles-list-wrapper">
+                <div class="container">
+                    <div class="articles-grid masonry__grid">
+                        @{
+                            foreach (var yazi in Model)
+                            {
+
+                                <div class="articles-grid__item masonry__item">
+                                     <div class="article-item" data-filters="Inspiration">
+                                                  <a href="@Url.Action("Yazi",new { Slug=yazi.Slug})" class="article-item__image-wrapper"><img src="http://paul-themes.com/html/arquito/demo/img/journal-image-1.jpg" alt="" /></a>
+                                                                
+                                                    <a href="@Url.Action("Yazi",new { Slug=yazi.Slug})" class="article-item__item-title">@yazi.Title</a>
+                                             <div class="article-item__item-footer">
+                                                <a href="@Url.Action("Yazi",new { Slug=yazi.Slug})" class="article-item__category"><i class="icon-3d-glasses"> @yazi.ViewsCount kez okundu</i></a>
+                                                  <div class="article-item__date">@yazi.CreatedDate</div>
+                                            </div>
+                                     </div>
+                                </div>
+                            }
+
+                        }
+                    </div>
+                    </div>
+            </div>
+      

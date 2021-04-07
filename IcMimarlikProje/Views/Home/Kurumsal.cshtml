@@ -1,0 +1,284 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Mertcan Gökmen">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Teko:300,400" rel="stylesheet">
+    <title>Kurumsal</title>
+    <meta name="description" content="Kurumsal Sayfası" />
+    <link href="assets/css/icofont.min.css" rel="stylesheet">
+    <link href="assets/css/linearicons.min.css" rel="stylesheet">
+    <link href="assets/css/magnific-popup.min.css" rel="stylesheet">
+    <link href="assets/css/animsition.min.css" rel="stylesheet">
+    <link href="assets/css/swiper.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="assets/css/theme.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body class="page no-mobile" style="padding-bottom: 630px;">
+   
+    <div class="page__inner animsition" style="animation-duration: 500ms; opacity: 1;">
+
+        <header class="header header_white header_fixed">
+            <div class="header__container">
+                <div class="header__wrapper container-fluid">
+                    <div class="header__inner"><a href="/" class="logo header__logo">MSK İç Mimarlık</a><button type="button" class="header__menu-button">
+                        <span class="header__menu-button-inner"></span></button></div>
+                    
+                    <div class="header-fixed" style="top:-5px">
+                        <div class="header-fixed__bottom container">                        
+                           <ul class="top-menu header-fixed__menu">                           
+                                <li class="top-menu__menu-item">
+                                    <div class="dropdown">
+                                        <a><div class="dropdown__trigger top-menu__menu-link">@Html.ActionLink("Anasayfa", "Index", "Home")</div></a>
+                                    </div>
+                                </li>
+                                <li class="top-menu__menu-item">
+                                    <div class="dropdown">
+                                        <a><div class="dropdown__trigger top-menu__menu-link">@Html.ActionLink("Kurumsal", "Kurumsal", "Home")</div></a>
+                                    </div>
+                                </li>
+                                <li class="top-menu__menu-item">
+                                    <div class="dropdown">
+                                        <a><div class="dropdown__trigger top-menu__menu-link">@Html.ActionLink("Blog", "Index", "Blog")</div></a>
+                                    </div>
+                                </li>
+                                <li class="top-menu__menu-item">
+                                    <div class="dropdown">
+                                        <a><div class="dropdown__trigger top-menu__menu-link">@Html.ActionLink("İletişim", "Iletisim", "Home")</div></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__overlay"></div>
+            <div class="menu-panel header__menu">
+                <div class="menu-panel__inner">
+                    <button type="button" class="header__menu-button header__menu-button_fixed"><span class="header__menu-button-inner"></span></button>
+                    
+                    <div class="menu-panel__menu">
+                        
+                        <div class="menu-panel__menu-item">
+                            <div class="menu-panel__menu-link collapsed">@Html.ActionLink("Anasayfa", "Index", "Home")</div>
+
+                        </div>
+                        <div class="menu-panel__menu-item">
+                            <div class="menu-panel__menu-link collapsed">@Html.ActionLink("Kurumsal", "Kurumsal", "Home")</div>
+
+                        </div>
+                        <div class="menu-panel__menu-item">
+                            <div class="menu-panel__menu-link collapsed">@Html.ActionLink("Blog", "Index", "Blog")</div>
+
+                        </div>
+                        <div class="menu-panel__menu-item">
+                            <div class="menu-panel__menu-link collapsed collapsed">@Html.ActionLink("İletişim", "Iletisim", "Home")</div>
+
+                        </div>
+
+                    </div>
+                    <div class="menu-panel__footer">
+                        <div class="socials menu-panel__socials">
+                            <a href="#" class="socials__social icofont-twitter">
+                                <div class="visually-hidden">twitter</div>
+                            </a><a href="#" class="socials__social icofont-facebook">
+                                <div class="visually-hidden">facebook</div>
+                            </a><a href="#" class="socials__social icofont-google-plus">
+                                <div class="visually-hidden">google plus</div>
+                            </a>
+                        </div>
+                        <div class="menu-panel__bottom">
+                            <div class="menu-panel__copyright">© 2021 <strong>MSK MIMARLIK</strong> Tüm hakları saklıdır.</div>
+                            <div class="menu-panel__author"> <a href="#">Mertcan Gökmen</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+       
+       
+
+
+        <main>
+            <div class="main-slide main-slide main-slide_size_medium">
+                <div class="parallax-image main-slide__image">
+                    <div data-rellax-speed="-3" data-rellax-percentage="0.5" style="background-image: url('/img/kurumsalarkaplan.jpg'); transform: translate3d(0px, 0px, 0px);" class="parallax-image__image"></div>
+                </div>
+                <div class="faded-block main-slide__container container" style="filter: blur(0px);">
+                    <div class="main-slide__slide-inner">
+
+                        <div class="main-slide__title-wrapper">
+                            <div class="main-slide__title">Profesyonel &amp;<br> Cana Yakın</div>
+                        </div>
+                        <div class="main-slide__text-wrapper">
+                            <div class="main-slide__text">MSK demek, mükemmeli hedefleyen, hevesli bir ekip demek.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="container">
+                <div class="heading-smallest heading-smallest heading-smallest_has-offset heading-smallest heading-smallest_size_default">Uzmanlık Alanlarımız</div>
+            </div>
+            <div class="cards">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="cards__item col-12 col-md-6 col-xl-3">
+                            <div style="background-image: url('/img/d1.jpg')" class="cards__item-inner">
+                                <span class="cards__item-content">
+                                    <span class="cards__item-index">01</span><span class="cards__item-title">Mimarlık</span><span class="cards__item-text">
+                                        Mimar olarak, her günün yeni ve eşsiz olduğunun kanısındayız.
+                                        İnsanların nasıl yaşamak istediklerinin ve hayallerinin farkındayız.
+                                    </span><span class="cards__arrow icon-chevron-right"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="cards__item col-12 col-md-6 col-xl-3">
+                            <a style="background-image: url('/img/d2.jpg')" href="#" class="cards__item-inner">
+                                <span class="cards__item-content">
+                                    <span class="cards__item-index">02</span><span class="cards__item-title">İç Dizayn</span><span class="cards__item-text">
+                                        Çalışmalarımızda sanatı, mimariyi ve
+                                        doğayı birleştiriyoruz.
+                                    </span><span class="cards__arrow icon-chevron-right"></span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="cards__item col-12 col-md-6 col-xl-3">
+                            <a style="background-image: url('/img/d3.jpg')" href="#" class="cards__item-inner">
+                                <span class="cards__item-content">
+                                    <span class="cards__item-index">03</span><span class="cards__item-title">Peyzaj ve bahçe dizaynı</span><span class="cards__item-text">
+                                        Şehir yaşamı ve kültürü birleştirerek
+                                        hep düşlerini kurduğunuz evi tasarlıyoruz.
+
+                                    </span><span class="cards__arrow icon-chevron-right"></span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="cards__item col-12 col-md-6 col-xl-3">
+                            <a style="background-image: url('/img/d4.jpg')" href="#" class="cards__item-inner">
+                                <span class="cards__item-content">
+                                    <span class="cards__item-index">04</span><span class="cards__item-title">Danışmanlık</span><span class="cards__item-text">
+                                        Sizlerle birlikte tasarlayacağımız konutlarda
+                                        mutlu ve huzurlu bir yaşam sürün.
+                                    </span><span class="cards__arrow icon-chevron-right"></span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-5">
+                            <div class="heading-smallest heading-smallest heading-smallest_has-offset heading-smallest heading-smallest_size_default">Çalışma Sürecimiz</div>
+                            <div class="collapse-list">
+                                <div class="collapse-list__collapse">
+                                    <a href="#collapse1" data-toggle="collapse" class="collapse-list__collapse-head collapsed">1. Konsept<span class="collapse-list__collapse-head-icon icon-chevron-up"></span></a>
+                                    <div id="collapse1" class="collapse-list__collapse-text collapse">
+                                        <div class="collapse-list__collapse-text-inner">
+                                            Sizlerin hayalleriyle uzman görüşünü derliyoruz.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse-list__collapse">
+                                    <a href="#collapse2" data-toggle="collapse" class="collapse-list__collapse-head collapsed">2. Dizayn &amp; Geliştirme<span class="collapse-list__collapse-head-icon icon-chevron-up"></span></a>
+                                    <div id="collapse2" class="collapse-list__collapse-text collapse">
+                                        <div class="collapse-list__collapse-text-inner">
+                                            Mimari tasarımları yapıyor ve planları çıkarıyoruz.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse-list__collapse">
+                                    <a href="#collapse3" data-toggle="collapse" class="collapse-list__collapse-head collapsed">3. İcra<span class="collapse-list__collapse-head-icon icon-chevron-up"></span></a>
+                                    <div id="collapse3" class="collapse-list__collapse-text collapse">
+                                        <div class="collapse-list__collapse-text-inner">
+                                            İstekleriniz doğrultusunda çalışmalar titizlikle yapılıyor.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse-list__collapse">
+                                    <a href="#collapse4" data-toggle="collapse" class="collapse-list__collapse-head collapsed">4. Teslim<span class="collapse-list__collapse-head-icon icon-chevron-up"></span></a>
+                                    <div id="collapse4" class="collapse-list__collapse-text collapse">
+                                        <div class="collapse-list__collapse-text-inner">
+                                            Hayallerinizi sizlere teslim ediyoruz.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 offset-lg-1"><a href="https://vimeo.com/34741214" target="_blank" class="video-block popup-video"><img src="/img/kurumsaldanisma.jpg" alt=""><span class="video-block__play"></span></a></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer-default footer footer_fixed">
+            <div class="container">
+                <div class="footer-default__head"><a href="/" class="logo">MSK Mimarlık</a></div>
+                <div class="row">
+                    <div class="footer-default__column col-12 col-sm-6 col-md-3">
+                        <div class="footer-default__group-title">MSK Mimarlık</div>
+                        <p>Karşıyaka Mahallesi Adnan Menderes Bulvarı Osmanlı Sitesi D Blok No 14,<br>Kumluca/ANTALYA</p>
+                        <p>info@serakaraalpicmimarlik.com</p>
+                        <p>(+90) 555 079 67 15</p>
+                    </div>
+
+                    <div class="footer-default__column col-12 col-sm-6 col-md-3">
+                        <div class="socials footer-default__socials">
+                            <a href="#" class="socials__social icofont-twitter">
+                                <div class="visually-hidden">twitter</div>
+                            </a><a href="#" class="socials__social icofont-facebook">
+                                <div class="visually-hidden">facebook</div>
+                            </a><a href="#" class="socials__social icofont-google-plus">
+                                <div class="visually-hidden">google plus</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-default__bottom">
+                    <div class="footer-studio__copyright">© 2021 <strong>MSK İÇ MİMARLIK</strong> Tüm hakları saklıdır. <a href="#">Mertcan Gökmen</a></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="assets/js/polyfill.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.viewport.min.js"></script>
+    <script src="assets/js/jQuerySimpleCounter.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/animsition.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/rellax.min.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/smoothscroll.js"></script>
+    <script src="assets/js/svg4everybody.legacy.min.js"></script>
+    <script src="assets/js/TweenMax.min.js"></script>
+    <script src="assets/js/TimelineLite.min.js"></script>
+    <script src="assets/js/typed.min.js"></script>
+    <script src="assets/js/vivus.min.js"></script>
+
+    <script src="assets/js/theme.js"></script>
+
+
+</body>
+</html>
