@@ -80,7 +80,7 @@
                 method: "POST",
                 data: { "comment": model, "recaptcha": recaptcha },
             }).done(function (result) {
-                if (result != "" && result != "ERR" && result != "NOAUTHOR" && result != "NOCOMMENT") {
+                if (result != "" && result != "ERR" && result != "NOAUTHOR" && result != "NOCOMMENT"  && result != "FLOOD") {
                     $("#CommentText").val("");
                     $("#AuthorName").val("");
                     $(".comments__list").prepend(result);
@@ -96,6 +96,9 @@
                         case "NOCOMMENT":
                             swal("Lütfen yorum giriniz.");
                             break;
+                        case "FLOOD":
+                            swal("Lütfen iki yorum arasında bir dakika bekleyiniz");
+                            break;    
                         default:
                             swal("Lütfen Captcha'ya tik atınız.");
                     }
