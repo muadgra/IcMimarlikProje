@@ -1,4 +1,4 @@
-﻿using IcMimarlikProje.Models.Data;
+using IcMimarlikProje.Models.Data;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -12,6 +12,17 @@ namespace IcMimarlikProje.Controllers
     [RoutePrefix("Blog")]
     public class BlogController : Controller
     {
+        private bool KullaniciIpKontrol(string ipAdresi)
+        {
+            var lastComment = db.Comment.OrderByDescending(x => x.CommentDate).FirstOrDefault();
+            DateTime now = DateTime.Now;
+            TimeSpan difference = now.Subtract((DateTime)lastComment.CommentDate);
+            if(difference.TotalSeconds < 60)
+            {
+                return false;
+            }
+            return true;
+        }
         private readonly SeraKaraalpContext db = new SeraKaraalpContext();
         public ActionResult Index()
         {
@@ -41,6 +52,8 @@ namespace IcMimarlikProje.Controllers
                 return Json("NOAUTHOR", JsonRequestBehavior.AllowGet);
             if (recaptcha == "NOCOMMENT")
                 return Json("NOCOMMENT", JsonRequestBehavior.AllowGet);
+
+            
             var response = recaptcha;
             string secretKey = "";
             var client = new WebClient();
@@ -57,6 +70,11 @@ namespace IcMimarlikProje.Controllers
                     ipAddress = Request.ServerVariables["REMOTE_ADDR"];
                 }
                 //buraya ip adres kontrolü koy.
+
+                if (!KullaniciIpKontrol(ipAddress))
+                {
+                    return Json("FLOOD", JsonRequestBehavior.AllowGet);
+                }
                 comment.CommentIp = ipAddress;
 
 
